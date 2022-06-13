@@ -1,0 +1,173 @@
+/* GRILLA */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
+
+* {
+   padding: 0%;
+   margin: 0%;
+   text-decoration: none;
+}
+
+
+/* GRILLA BASE */
+.grilla {
+   display: grid;
+   grid-template-columns: 1fr 1.1fr 0.9fr 1fr;
+   grid-template-areas:
+      "nav titulo titulo titulo"
+      "nav section1 section1 aside"
+      "nav section1 section1 aside"
+      "nav section2 section2 aside"
+      "nav section2 section2 aside"
+      "footer footer footer footer";
+   font-family: 'Crimson Text', serif;
+   background-color: #f2f2f0;
+}
+
+/*MENU DE NAVEGACION */
+.nav {
+   grid-area: nav;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.nav ul {
+   margin-top: 45px;
+   width: 100%;
+}
+
+.nav li {
+   list-style: none;
+   padding: 20px;
+   text-align: center;
+}
+
+.nav li:hover {
+   background-color: #D25B01;
+}
+
+.nav a {
+   color: #5B1C02;
+   font-size: 20px;
+}
+
+/* LOGO DULCE ABIGAIL */
+.logoDesktop {
+   width: 80px;
+}
+
+/* HEADER */
+.titulo {
+   grid-area: titulo;
+   background-color: #E1C0BA;
+   height: 15vh;
+   text-align: center;
+}
+
+.titulo h1 {
+   margin: 1rem;
+   font-size: 50px;
+}
+
+/* SECTION 1 */
+.section1 {
+   grid-area: section1;
+   margin: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.section1 p {
+   padding-bottom: 3px;
+}
+
+/* FORM */
+form input {
+   margin: 3px;
+   border-bottom: 2px;
+   height: 1rem;
+}
+
+form input [type=submit]:hover {
+   background-color: black;
+}
+
+.imagenSection1 {
+   height: 300px;
+}
+
+/* SECTION 2 */
+.section2 {
+   grid-area: section2;
+   display: flex;
+   flex-direction: column;
+}
+
+.section2 p {
+   font-size: 1.8rem;
+   text-align: center;
+}
+
+.section2 div {
+   display: flex;
+   justify-content: center;
+}
+
+.section2 img {
+   max-width: 300px;
+}
+
+.aside {
+   grid-area: aside;
+}
+
+.aside p {
+   text-align: center;
+}
+
+.aside li {
+   list-style: none;
+   background-color: #E1C0BA;
+   padding-bottom: 10px;
+}
+
+.aside ul {
+   display: flex;
+   text-align: center;
+   flex-direction: column
+}
+
+.aside ol {
+   padding-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+   grid-area: footer;
+   display: flex;
+   background-color: #E1C0BA;
+   color: black;
+   justify-content: space-evenly
+}
+
+.footer li {
+   list-style: none;
+   padding-top: 3px;
+}
+
+/* RESPONSIVE DESING-MEDIA QUERY- MOBILE LAST */
+
+@media(max-width: 768px) {
+   .grilla {
+      display: grid;
+      grid-template-areas:
+         "nav mav nav nav"
+         "titulo titulo titulo titulo"
+         "section1 section1 section1 section1"
+         "section1 section1 section1 section1"
+         "section2 section2 section2 section2"
+         "footer footer footer footer";
+
+   }
+}
