@@ -41,6 +41,9 @@
    padding: 20px;
    text-align: center;
 }
+.nav li:hover{
+   transition: 2s;
+}
 
 .nav li:hover {
    background-color: #D25B01;
@@ -59,10 +62,11 @@
 /* HEADER */
 .titulo {
    grid-area: titulo;
-   background-color: #E1C0BA;
    height: 15vh;
    text-align: center;
+   background-image: linear-gradient(45deg,#E1C0BA,#fdcae1,#ff9e8e);
 }
+
 
 .titulo h1 {
    margin: 1rem;
@@ -128,7 +132,7 @@ form input [type=submit]:hover {
 
 .aside li {
    list-style: none;
-   background-color: #E1C0BA;
+   background-color:#ff9e8e ;
    padding-bottom: 10px;
 }
 
@@ -146,7 +150,7 @@ form input [type=submit]:hover {
 .footer {
    grid-area: footer;
    display: flex;
-   background-color: #E1C0BA;
+   background-image: linear-gradient(45deg,#E1C0BA,#fdcae1,#ff9e8e);
    color: black;
    justify-content: space-evenly
 }
@@ -158,16 +162,3 @@ form input [type=submit]:hover {
 
 /* RESPONSIVE DESING-MEDIA QUERY- MOBILE LAST */
 
-@media(max-width: 768px) {
-   .grilla {
-      display: grid;
-      grid-template-areas:
-         "nav mav nav nav"
-         "titulo titulo titulo titulo"
-         "section1 section1 section1 section1"
-         "section1 section1 section1 section1"
-         "section2 section2 section2 section2"
-         "footer footer footer footer";
-
-   }
-}
